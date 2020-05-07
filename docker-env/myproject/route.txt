@@ -1,0 +1,49 @@
++--------+-----------+----------------------------------------------+-------------------------+-----------------------------------------------------------+---------------------+
+| Domain | Method    | URI                                          | Name                    | Action                                                    | Middleware          |
++--------+-----------+----------------------------------------------+-------------------------+-----------------------------------------------------------+---------------------+
+|        | GET|HEAD  | /                                            |                         | App\Http\Controllers\AdminController@index                | web,CheckLevel,auth |
+|        | GET|HEAD  | about                                        |                         | App\Http\Controllers\HomeController@page                  | web,auth            |
+|        | GET|HEAD  | admin/news                                   | news.index              | App\Http\Controllers\NewsController@index                 | web,CheckLevel      |
+|        | POST      | admin/news                                   | news.store              | App\Http\Controllers\NewsController@store                 | web,CheckLevel      |
+|        | GET|HEAD  | admin/news/create                            | news.create             | App\Http\Controllers\NewsController@create                | web,CheckLevel      |
+|        | DELETE    | admin/news/{news}                            | news.destroy            | App\Http\Controllers\NewsController@destroy               | web,CheckLevel      |
+|        | PUT|PATCH | admin/news/{news}                            | news.update             | App\Http\Controllers\NewsController@update                | web,CheckLevel      |
+|        | GET|HEAD  | admin/news/{news}                            | news.show               | App\Http\Controllers\NewsController@show                  | web,CheckLevel      |
+|        | GET|HEAD  | admin/news/{news}/edit                       | news.edit               | App\Http\Controllers\NewsController@edit                  | web,CheckLevel      |
+|        | GET|HEAD  | admin/product                                | product.index           | App\Http\Controllers\ProductController@index              | web,CheckLevel      |
+|        | POST      | admin/product                                | product.store           | App\Http\Controllers\ProductController@store              | web,CheckLevel      |
+|        | POST      | admin/product-voucher                        | product-voucher.store   | App\Http\Controllers\ProductVoucherController@store       | web,CheckLevel      |
+|        | GET|HEAD  | admin/product-voucher                        | product-voucher.index   | App\Http\Controllers\ProductVoucherController@index       | web,CheckLevel      |
+|        | GET|HEAD  | admin/product-voucher/create                 | product-voucher.create  | App\Http\Controllers\ProductVoucherController@create      | web,CheckLevel      |
+|        | PUT|PATCH | admin/product-voucher/{product_voucher}      | product-voucher.update  | App\Http\Controllers\ProductVoucherController@update      | web,CheckLevel      |
+|        | DELETE    | admin/product-voucher/{product_voucher}      | product-voucher.destroy | App\Http\Controllers\ProductVoucherController@destroy     | web,CheckLevel      |
+|        | GET|HEAD  | admin/product-voucher/{product_voucher}      | product-voucher.show    | App\Http\Controllers\ProductVoucherController@show        | web,CheckLevel      |
+|        | GET|HEAD  | admin/product-voucher/{product_voucher}/edit | product-voucher.edit    | App\Http\Controllers\ProductVoucherController@edit        | web,CheckLevel      |
+|        | GET|HEAD  | admin/product/create                         | product.create          | App\Http\Controllers\ProductController@create             | web,CheckLevel      |
+|        | DELETE    | admin/product/{product}                      | product.destroy         | App\Http\Controllers\ProductController@destroy            | web,CheckLevel      |
+|        | PUT|PATCH | admin/product/{product}                      | product.update          | App\Http\Controllers\ProductController@update             | web,CheckLevel      |
+|        | GET|HEAD  | admin/product/{product}                      | product.show            | App\Http\Controllers\ProductController@show               | web,CheckLevel      |
+|        | GET|HEAD  | admin/product/{product}/edit                 | product.edit            | App\Http\Controllers\ProductController@edit               | web,CheckLevel      |
+|        | POST      | admin/voucher                                | voucher.store           | App\Http\Controllers\VoucherController@store              | web,CheckLevel      |
+|        | GET|HEAD  | admin/voucher                                | voucher.index           | App\Http\Controllers\VoucherController@index              | web,CheckLevel      |
+|        | GET|HEAD  | admin/voucher/create                         | voucher.create          | App\Http\Controllers\VoucherController@create             | web,CheckLevel      |
+|        | GET|HEAD  | admin/voucher/{voucher}                      | voucher.show            | App\Http\Controllers\VoucherController@show               | web,CheckLevel      |
+|        | PUT|PATCH | admin/voucher/{voucher}                      | voucher.update          | App\Http\Controllers\VoucherController@update             | web,CheckLevel      |
+|        | DELETE    | admin/voucher/{voucher}                      | voucher.destroy         | App\Http\Controllers\VoucherController@destroy            | web,CheckLevel      |
+|        | GET|HEAD  | admin/voucher/{voucher}/edit                 | voucher.edit            | App\Http\Controllers\VoucherController@edit               | web,CheckLevel      |
+|        | GET|HEAD  | api/user                                     |                         | Closure                                                   | api,auth:api        |
+|        | GET|HEAD  | cart                                         | cart                    | App\Http\Controllers\HomeController@cart                  | web,auth            |
+|        | POST      | cart                                         | add                     | App\Http\Controllers\HomeController@add                   | web,auth            |
+|        | DELETE    | cart                                         | delete                  | App\Http\Controllers\HomeController@delete                | web,auth            |
+|        | POST      | cart/voucher                                 | percent                 | App\Http\Controllers\HomeController@voucher               | web,auth            |
+|        | GET|HEAD  | contact                                      |                         | App\Http\Controllers\HomeController@contact               | web,auth            |
+|        | GET|HEAD  | home                                         |                         | App\Http\Controllers\AdminController@index                | web,CheckLevel,auth |
+|        | GET|HEAD  | index                                        | index                   | App\Http\Controllers\HomeController@index                 | web,auth            |
+|        | GET|HEAD  | layout/detail/{id}                           |                         | App\Http\Controllers\HomeController@detail                | web,auth            |
+|        | POST      | login                                        | login                   | App\Http\Controllers\Auth\LoginController@postLogin       | web,guest           |
+|        | GET|HEAD  | login                                        | login                   | App\Http\Controllers\Auth\LoginController@getLogin        | web,guest           |
+|        | GET|HEAD  | logout                                       | logout                  | App\Http\Controllers\Auth\LogoutController@getLogout      | web,auth            |
+|        | GET|HEAD  | post                                         |                         | App\Http\Controllers\HomeController@show                  | web,auth            |
+|        | GET|HEAD  | register                                     |                         | App\Http\Controllers\Auth\RegisterController@getRegister  | web,guest           |
+|        | POST      | register                                     |                         | App\Http\Controllers\Auth\RegisterController@postRegister | web,guest           |
++--------+-----------+----------------------------------------------+-------------------------+-----------------------------------------------------------+---------------------+
